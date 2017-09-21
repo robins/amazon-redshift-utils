@@ -22,3 +22,4 @@ GROUP BY date_trunc('hour',a.service_class_start_time),
          b.condition
 ORDER BY date_trunc('hour',a.service_class_start_time) DESC,
          a.service_class DESC;
+

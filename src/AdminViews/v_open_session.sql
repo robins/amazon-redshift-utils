@@ -15,5 +15,4 @@ LEFT OUTER JOIN
 	(SELECT event, recordtime, remotehost, remoteport, pid, username, duration FROM stl_connection_log WHERE event = 'disconnecting session') AS disc
 		ON init.pid = disc.pid
 		AND init.remotehost = disc.remotehost
-		AND init.remoteport = disc.remoteport
-;
+		AND init.remoteport = disc.remoteport;

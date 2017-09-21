@@ -39,5 +39,4 @@ FROM /* Calculate the icosile (1/20th) for each query by type and hour */
            ) a
       ) b
 GROUP BY 1,2,3
-ORDER BY 1,2,3
-;
+ORDER BY 1,2,3;

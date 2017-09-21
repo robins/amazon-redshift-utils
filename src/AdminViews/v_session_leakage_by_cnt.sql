@@ -30,3 +30,4 @@ LEFT OUTER JOIN
      	ON i.remotehost = d.remotehost 
      	AND i.username = d.username
 ORDER BY i.eventcount - COALESCE(d.eventcount, 0) DESC;
+

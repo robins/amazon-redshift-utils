@@ -36,3 +36,16 @@ All views assume you have a schema called admin.
 | v_session_leakage_by_cnt.sql |   View to monitor session leakage by remote host |   
 | v_space_used_per_tbl.sql |   View to get pull space used per table | 
 | v_view_dependency.sql |   View to get the names of the views that are dependent other tables/views |
+
+
+## Script to Create these VIEWs in a database
+
+ls  -t *.sql | xargs -d '\n' cat | \
+  grep -v "^--DROP VIEW" | sed 's/--DROP VIEW/DROP VIEW/g'| \
+  psql  -U redshiftadmin -h  rs_cluster_endpoint -p 5439 targetdb -
+
+## Script to Drop these VIEWs from a database
+
+ls  -t *.sql | xargs -d '\n' cat | \
+  grep "^--DROP VIEW" | sed 's/--DROP VIEW/DROP VIEW/g'| \
+  psql  -U redshiftadmin -h  rs_cluster_endpoint -p 5439 targetdb -

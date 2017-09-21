@@ -28,5 +28,4 @@ INNER JOIN
         ON tgtobj.oid = con.conrelid
 INNER JOIN
     pg_catalog.pg_namespace AS tgtnsp
-        ON tgtobj.relnamespace = tgtnsp.oid
-;
+        ON tgtobj.relnamespace = tgtnsp.oid;

@@ -8,5 +8,4 @@ CREATE OR REPLACE VIEW admin.v_object_dependency
 AS
 SELECT 'view' AS dependency_type, *, NULL AS constraint_name FROM admin.v_view_dependency
 UNION
-SELECT 'fkey constraint' AS dependency_type, * FROM admin.v_constraint_dependency
-;
+SELECT 'fkey constraint' AS dependency_type, * FROM admin.v_constraint_dependency;
