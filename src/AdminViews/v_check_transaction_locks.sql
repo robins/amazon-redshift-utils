@@ -18,5 +18,4 @@ l.granted
 FROM pg_catalog.pg_locks l
 JOIN pg_catalog.pg_class c ON c.oid = l.relation
 JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-JOIN pg_catalog.pg_stat_activity a ON a.procpid = l.pid
-;
+JOIN pg_catalog.pg_stat_activity a ON a.procpid = l.pid;

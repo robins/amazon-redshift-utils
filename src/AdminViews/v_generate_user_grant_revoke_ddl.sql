@@ -31,6 +31,7 @@ select ddl from v_generate_user_grant_revoke_ddl where grantor='<username>' and 
 select ddl from v_generate_user_grant_revoke_ddl where ddltype='revoke' and (username='<username>' or grantor='<username>');		
 ************************************************************************************************************************/
 
+--DROP VIEW v_generate_user_grant_revoke_ddl;
 CREATE OR REPLACE VIEW v_generate_user_grant_revoke_ddl as
 WITH 
 grantor as (select usesysid,usename from pg_user),
